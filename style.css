@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.invitation-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #f77f00;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    background-color: #f77f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d65a00;
+}
+
+#waitingList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#waitingList li {
+    background-color: #ffe5b4;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #8ecae6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.link-button:hover {
+    background-color: #219ebc;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="invitation-container">
+        <h1>Daftar Tamu yang Akan Datang</h1>
+        <ul id="waitingList"></ul>
+
+        <a href="index.html" class="link-button">Kembali ke Undangan</a>
+    </div>
+
+    <script>
+        const listElement = document.getElementById("waitingList");
+        const list = JSON.parse(localStorage.getItem("waitingList")) || [];
+
+        function renderList() {
+            listElement.innerHTML = "";
+            list.forEach((name, index) => {
+                const li = document.createElement("li");
+                li.textContent = name;
+                const delBtn = document.createElement("button");
+                delBtn.textContent = "Hapus";
+                delBtn.onclick = function () {
+                    list.splice(index, 1);
+                    localStorage.setItem("waitingList", JSON.stringify(list));
+                    renderList();
+                };
+                li.appendChild(delBtn);
+                listElement.appendChild(li);
+            });
+        }
+
+        renderList();
+    </script>
+</body>
+</html>
